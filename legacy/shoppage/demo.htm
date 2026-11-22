@@ -1,0 +1,149 @@
+<HTML>
+<HEAD><TITLE>SHOPPAGE DEMO</TITLE>
+</HEAD>
+<BODY BGCOLOR="#FFFFFF">
+<BASEFONT SIZE=3>
+<A NAME="top"></A>
+<TABLE WIDTH=475>
+<TR>
+<TD width=225>
+<STRONG><FONT SIZE=+3>Shopping Cart</FONT></STRONG><BR>
+<STRONG><FONT SIZE=+2>Single Page Version</FONT></STRONG>
+</TD>
+</TR>
+</TABLE>
+<br clear=all>
+
+<HR NOSHADE>
+<!---------------- Order Form ------------------>
+
+<DL>
+<DT><dd><font size=6>Function:</font><font size=4> The <STRONG><EM>Shopping Cart</EM></STRONG> is designed as a generic item selector from a multiple-item list.</font><P>
+<DT><dd><font size=6>Features:</font><font size=4> Allows your user to choose from a list of items - by clicking in a check box or entering desired quantity.  Any amount of data may be collected regarding each selected item, such as product number, price,
+
+ etc.  Additional information may also be collected regarding your customer, as necessary.  The program then processes this information and presents the data to the user for confirmation. <P>
+
+Shopping Cart will even e-mail your customer a copy of the sales slip.</font><P>
+<DT><dd><font size=6>Applications:</font><font size=4><STRONG><EM> The Shopping Cart</EM></STRONG> program has wide possibilities.</font><BR>
+<UL>
+<LH></LH>
+<LI><H4>ordering information, 
+<LI>catalog and/or retail sales,
+<LI>user questionaires and surveys,
+<LI>magazine reader response (bingo) cards, or
+<LI> public opinion polls. </H4>
+</UL>
+</DL>
+<HR WIDTH=100% SIZE=5>
+<P>
+
+<font size=6><STRONG>Order Books from Outdoor Adventures Bookstore:</STRONG></font>
+
+
+<br clear=all>
+<FORM METHOD="POST" ACTION="http://eastasiatrading.com/cgi-eastasiatrading/cart.cgi">
+<INPUT TYPE="HIDDEN" NAME="Address"  VALUE="eastasiatrading@eastasiatrading.com">
+<INPUT TYPE="HIDDEN" NAME="Subject"  VALUE="1-Pg Cart Demo">
+<!--<INPUT TYPE="HIDDEN" NAME="Template" VALUE="">-->
+<INPUT TYPE="HIDDEN" NAME="Confpage" Value="/web/eastasiatrading/shoppage/saleslip.htm">
+<INPUT TYPE="HIDDEN" NAME="Prevpage" VALUE="http://eastasiatrading.com/">
+<INPUT TYPE="HIDDEN" NAME="Cshipping" VALUE="">
+
+
+
+
+<INPUT TYPE="HIDDEN" NAME="Prodno" VALUE="1234567">
+<INPUT TYPE="HIDDEN" NAME="Price" VALUE="12.95">
+<INPUT TYPE="HIDDEN" NAME="Item" VALUE="50 Best Short Hikes in California Deserts">
+<INPUT TYPE="HIDDEN" NAME="Describe" VALUE="by Krist">
+<INPUT TYPE="HIDDEN" NAME="Info" VALUE="Hardback">
+Qty:<INPUT TYPE="text" NAME="Qty" size=2 VALUE ="0">
+
+<STRONG>50 Best Short Hikes in California Deserts</STRONG><BR>
+by Krist, <i>205 pages with Photos, Illus, & Maps</i>, <BR>
+<STRONG>Price: </STRONG> $12.95<BR>
+
+<STRONG>This book introduces you to the best of the day hikes in and around Death Valley National Park, Joshua 
+Tree National Park, and Mojave National Preserve.</STRONG><BR>
+
+<HR><P>
+
+<INPUT TYPE="HIDDEN" NAME="Prodno" VALUE="9004582">
+<INPUT TYPE="HIDDEN" NAME="Price" VALUE="15.00">  
+<INPUT TYPE="HIDDEN" NAME="Item" VALUE="Adventuring in the Rockies">
+<INPUT TYPE="HIDDEN" NAME="Describe" VALUE="by Schmidt">
+<INPUT TYPE="HIDDEN" NAME="Info" VALUE="Hardback">
+Qty:<INPUT TYPE="text" NAME="Qty" size=2 VALUE ="0">
+
+<STRONG>Adventuring in the Rockies</STRONG><BR>
+by Schmidt, <i>332 pages with Photos, Illus, & Maps</I> <BR>
+<STRONG>Price: </STRONG> $15.00<BR>
+
+<STRONG>Stretching from the northern reaches of British Columbia and Alberta through Montana, Idaho, 
+Wyoming, and Colorado to the high desert country of New Mexico, the magnificent Rocky Mountains. </STRONG>
+ <P>
+
+<HR><P>
+
+
+<INPUT TYPE="HIDDEN" NAME="Prodno" VALUE="1003889">
+<INPUT TYPE="HIDDEN" NAME="Price" VALUE="14.95"> <INPUT TYPE="HIDDEN" NAME="Item" VALUE="American Discovery Trail Guide">
+<INPUT TYPE="HIDDEN" NAME="Describe" VALUE="by Lukel"><INPUT TYPE="HIDDEN" NAME="Info" VALUE="Hardback">
+Qty:<INPUT TYPE="text" NAME="Qty" size=2 VALUE ="0"> 
+
+<STRONG>American Discovery Trail Guide</STRONG><BR>
+by Lukel, <i>122 pages with Photos, Illus, & Maps</I><BR>
+<STRONG>Price:</STRONG>  $14.95<BR>
+
+<STRONG>No trail does it better! The American Discovery Trail combines the nest of the backcountry with jaunts 
+through small towns and big cities and captures the diversity  of landscape and experience that is the 
+United States.  </STRONG>
+
+
+<HR><P>
+
+<CENTER><TABLE COLSPEC= "L20 L20" BORDER=0 WIDTH=500 HEIGHT=100 CELLPADDING=0 CELLSPACING=0>
+
+
+<TR><TD width=200>Name:</TD><TD width=250><INPUT TYPE="text" NAME="Name" size=25></TD></TR>
+
+<TR><TD width=200>Address:</TD><TD width=250><INPUT TYPE="text" NAME="Addr" size=25></TD></TR>
+
+<TR><TD width=200>City:</TD><TD width=250><INPUT TYPE="text" NAME="City" size=25></TD></TR>
+
+<TR><TD width=200>State and Zip:</TD><TD width=250><INPUT TYPE="text" NAME="State" size=25></TD></TR>
+
+<TR><TD width=200>Country:</TD><TD width=250><SELECT NAME="Country">
+
+<OPTION SELECTED VALUE=""> - Select Country - 
+<OPTION VALUE="USA">USA
+<OPTION VALUE="Canada">Canada
+
+</SELECT></TD></TR>
+
+
+<TR><TD width=200>Phone Number:</TD><TD width=250><INPUT TYPE="text" NAME="Phone" size=25></TD></TR>
+
+<TR><TD width=200>E-Mail Address to receive a copy of the sales slip:</TD><TD width=250><INPUT TYPE="text" NAME="Address2" size=25></TD></TR>
+
+<TR><TD width=200>State Sales Tax:</TD><TD width=250><INPUT TYPE="text" NAME="Taxes" size=6><font size=3><STRONG>( 0.00 ) Decimal Form</STRONG></font></TD></TR>
+
+</TABLE></CENTER><P>
+
+
+<CENTER><INPUT TYPE="submit"VALUE="Cash Register"><input type="Reset" value="Empty Shopping Cart"></CENTER>
+</FORM><P><BR>
+
+<HR><P>
+
+
+<!------------------Footer-------------------------->
+
+</font></CENTER>
+<P><BR>
+<CENTER><font size=2>Copyright Clickables Software - 1995, 1996 - All Rights Reserved</font></CENTER>
+<P><CENTER><font size=2>Clickable Software, POB 10233, San Rafael, CA 94912<BR>Voice - 415.456.5582, Fax -  415.456.4018 </font></CENTER><P><BR>
+
+
+</BODY>
+</HTML>

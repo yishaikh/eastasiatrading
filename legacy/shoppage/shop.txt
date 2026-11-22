@@ -1,0 +1,349 @@
+
+
+***************************************************
+SINGLE PAGE SHOPPING CART
+
+Clickables - CGI Programs - PERL Version P1.1
+This PERL script is compliant with both PERL 4 & 5
+
+***************************************************
+
+Clickables P1.1 cannot be altered, modified, nor copied in any fashion without the expressed written permission of Clickable Software, and is subject to the terms detailed in the license agreement accompanying it.
+
+***********************************************
+IMPORTANT!  Before going any further, insure that
+you understand and accept the terms of the  LICENSE.
+***********************************************
+          
+
+Down load Files:
+
+
+See Release Notes and/or Online Documents for updates about installation or use and to download associated files/templates.  Send feedback to us via E-Mail.
+
+
+Table of Contents
+
+1.  General Overview
+2.  Installation on Server
+3.  Working Sample
+4.  HTML Page Requirements
+5.  Formatting Output
+
+
+======================================================
+1.  GENERAL OVERVIEW
+======================================================
+
+Welcome to Clickables - easy to customize, easy to install, PERL CGI scripts. Clickables are copied into a directory on your server, configured with appropriate permission and access statements,  and called from your web page. 
+
+This documentation is written to be of maximum benefit to those who have little experience with web page development and dealing with CGI scripts.  Those more experienced may use only those areas that indicate the installation instructions and what HTML calls are necessary for each program.
+
+After installing the scripts and creating your web pages, it is advisable to view the pages in as many web browsers as possible.  Each browser displays forms, tables, etc. differently.  Know also that text browsers will not handle forms at all.  Netscape 1.1+ is more advanced in managing enhanced HTML tags.  
+
+
+============================================
+2.  Installing PERL Script(s) on UNIX Server:
+============================================
+
+You will need the PERL script(s), along with two other files to install your CGI programs:  
+
+
+ the install script - script_name.sh
+ the license file - licenst.txt
+
+
+If you're new at UNIX and unfamiliar with the details of how your server environment is configured, it may be a good idea to have your server administrator or ISP install your Clickables Scripts.  Directories and the files within them are assigned certain attributes by your ISP or server administrator.  These attributes have to do with who may have access to the directory (permissions), and attributes which set whether a file is a read-only, can be written to, etc., and by whom.  
+
+If you're doing the install, installing your scripts on your server will require two types of access to your server...telnet and ftp.  It might be a good idea to save the source of this page to your computer and print it out. 
+
+Telnet into your server and follow the next few steps.
+
+In the "cart.sh" script, you're being asked to enter information regarding your server setup and your web site.  And in your PERL script itself, a piece or two of information should be checked for the location of software on your server.
+
+1.  Copy files into directory on your server
+
+FTP into your server to copy files:
+If your familiar with how to edit files on your server using the "pico" or similar command, copy the files onto your server.  If you prefer, you may edit the scripts on your computer then copy the edited versions to your server.  The "install.sh" script will create the final sub-directory where the cgi scripts will reside if it doesn't exist.  So you may copy the needed files into any directory you choose on your server:
+
+
+===============================================
+2.  Enter Information in "cart.sh" Install Script
+===============================================
+
+
+In the install script, you will enter some information about how your website is configured. If you don't know the answers to the information needed, a list of UNIX commands are listed below that will assist you in ascertaining the data you need.
+
+
+(CLICKABLES_DIR=) This is the absolute directory path to the sub-directory in which your CGI scripts will reside...the sub-directory is usually named (cgi-bin).
+(DOCUMENT_ROOT=)  This is the absolute directory path to your main directory where your html pages reside.
+(OWNER=)  This is the name assigned to the owner of your site...usually the same name you use as your log-in name.
+(GROUP=)  This is the name of a group to which your website belongs.
+
+
+Editing "cart.sh"
+
+Use a TEXT editor to open your Clickables "cart.sh" file
+
+1.  Replace the first line with your "shell address", if different than shown. 
+2.  Enter the directory path to the cgi-bin directory, CLICKABLES_DIR=.
+3.  Enter the directory path to your home directory where your web pages are located, DOCUMENT_ROOT=.
+
+4.  Enter your owner name as OWNER=.
+5.  Enter your group name as GROUP=.
+6.  Save "install.sh"
+
+=========================================
+3.  Enter information in PERL Script(s)
+=========================================
+
+All Scripts - The first line in the PERL script points to the location of the perl interpreter on the server.  If this directory path is different from the standard location shown, change it.  You can determine the location of the perl interpreter on your server by typing whereis perl.
+
+In the data cather and shopping cart modules, a second line in the PERL script points to the location of the "sendmail" software on your server.  If this directory path is different from the standard shown, change it.  You can determine the location of the "sendmail" software by typing whereis sendmail.
+
+In the multiple page shopping cart, a third lines is needed.  It is the path to the sub-directory in which the temporary files are stored which tract the visitor and contains the contents of the shopping cart.  The default is /tmp.  If this directory does not exist or you choose to store the files elsewhere, change this directory path.
+
+Editing your PERL script
+
+Use a TEXT file editor to open your Clickables "PERL script" file
+
+1.  Enter the location of your PERL interpreter, if different than shown.  
+2.  For the cart and catch scripts, enter the absolute directory path to the "sendmail" software, $MAILPROG=.
+3.  For the multiple page shopping cart, enter the directory path for the storage of temporary files.
+
+3.  Save your PERL script.
+
+==========================
+4.  Run cart.sh
+==========================
+
+Before you can run the cart.sh script, you must make it executable.  At the prompt type: 
+
+&nbsp; &nbsp; chmod a+x cart.sh
+
+Then at the prompt,  cart.sh
+
+Install.sh will create your CLICKABLES_DIR if it doesn't exist and copy the PERL script(s) into it.  It will add an extension of (.cgi) to the script names.  Cart.sh will also assign the proper file attributes to the scripts and set permissions.
+
+And you now ready to begin the work on your HTML pages.  Use your browser's BACK button to return to the ONLINE DOCUMENTS for details on web page language.
+
+
+============================================
+Discovering Information about your Server:
+============================================
+
+Using the "cd" command, move into your website's home directory.  Write down the output from the following commands.
+
+
+1.  at the prompt, enter:  whereis sh
+The output provides your "shell address".  This will be entered on the top line of the install.sh script if different than shown.  
+
+2.  at the prompt, enter:    whereis perl
+The output provides the location of the "perl" interpreter software.  This will be in the first line of the PERL script if different than shown.
+
+3.  at the prompt, enter:  whereis sendmail
+
+The output provides an absolute directory path to your server's "sendmail" software.  This is entered in the second line of the PERL script of data catcher, guestbook, and shopping cart modules.
+
+4.  Using the "cd" command, move to your main directory which houses your web pages.
+at the prompt, enter: pwd
+
+The output provides your "absolute directory path to your home directory".  You will enter this in the install.sh as the DOCUMENT_ROOT.
+
+5.  at the prompt, enter: ls -l
+
+drwxrwxr-x   2 rayc     web       1024 Jan 16 23:11 protected/
+-rw-rw-r--   1 rayc     web        326 Jan 16 21:17 purpleba.gif
+-rw-rw-r--   1 rayc     web       1288 Jan 17 17:45 r_heros.html
+-rw-rw-r--   1 rayc     web       1353 Jan 17 17:45 r_kids.html
+
+
+The output lists all the files in your directory.   The first column is a list of permissions, the second column is usually a number, and the third column is your "owner name", usually the user name you use to log into your server, (in this case "rayc").  The fourth column is the "group name", (in this case "web").  You may see group names such as nobody, or user.  You want the group name that applies to your site.  The owner and group names will be entered in your install.sh script.
+
+6.  Using the cd command, go to either 
+
+(1) the subdirectory where the CGI scripts will finally reside (usually the "cgi-bin" directory, or 
+
+(2) if it doesn't exist, the subdirectory just above where the cgi-bin directory will be formed:
+at the prompt, enter: pwd
+
+The output is the absolute directory path to that directory.  If you're in the directory just above the "cgi-bin" directory, just add "cgi-bin" to the end of the output line.  You will enter this path in the install.sh script as CLICKABLES_DIR=.
+
+
+
+======================================================
+3.  WORKING DEMO
+======================================================
+
+A full working demo is available on the Online Docs page...you may download that source as a template for 
+your HTML forms language.
+
+
+===================================================
+4.  HTML PAGE REQUIREMENTS
+===================================================
+
+The shopping cart program is entitled cart.  Cart collects the information on the items placed in the shopping cart and presents a sales slip by inserting the information entered by the user onto a designated web page. (confirmation page).  This allows the user to confirm the data entered before sending it. 
+  
+The NAME of the variable is "Confpage", and in this example, we have named the confirmation page "saleslip.html".   A sample page is included as a template. You may customize the page in any manner you choose, however, the comment lines must remain as is.  The program looks for these comment lines and inserts the data collected in the form between them.
+
+When confirmed, the program then forwards the information via E-Mail to a designated e-mail address. 
+
+Second E-mail address:
+
+You may add an additonal data pair with the name being "Address2" if you want the forms data to be mailed to a second "given or fixed" e-mail address.  If you want a copy of the forms output to be mailed to your site visitor, use a text box in your customer information section, in which your visitor inputs his/her email address to receive a copy of the output.  Name the data pair "Address2"
+
+
+Activate the "cart" program by calling it in the FORM ACTION tag.
+
+Sun Solaris Note: If you're server is running Solaris software, change the METHOD="POST" to METHOD="GET"
+
+
+
+The next pieces of information that are sent to the CGI program are expressed in hidden input lines:
+
+
+Place the E-Mail address to where the information is to be sent in the value "Address".
+ 
+The value placed in "Subject" will be placed in the subject line of the E-Mail message.  This identifies the information for the person on the receiving end.
+
+The value placed in Template is the (absolute) directory path to the text file used as a template for formatting the forms output. 
+
+
+The value placed in Confpage is the absolute directory path to the web page that is used as the confirmation page...the page on which the purchase recap occurs.
+
+Place the URL of the web page to which you would like to return after the operation is completed in the "Prevpage" value.
+
+NOTE:
+
+When you are pointing to a file or web page that required a directory path, such as "Template" or "Confpage", make sure this is the absolute pathname, and not a virtual path, beginning at the httpd root of your site: for example. 
+
+(/home/local/public_html/template.txt)
+
+Shipping costs can be computed as either a percentage of the total sale..."Pshipping", or as a fixed value... "Fshipping".  Use either line, or use both with putting a value in only one.
+
+
+You can also add a hidden line for sales taxes.  If so, use Taxes for NAME and assign an amount to the VALUE in ( 0.00 ), percentage format.  Notice that in our example we are allowing Taxes to be input by the user in the lower section with customer information.
+
+===================================
+PRODUCT LISTINGS:
+===================================
+
+Any number of products may be included.  Each product is accompanied by HIDDEN-LINE data pairs and an input line for quantity selected.   Each line constitutes one data pair - composed of:  NAME and VALUE.  
+
+
+Line 1:The INPUT TYPE is "HIDDEN"..  NAME="Prodno"... a product stock number or product identifier of some type.
+
+
+
+Line2: NAME is "Price".  Set VALUE to the product price...digits only, with no ($).  This value will be used in calculations.
+
+
+
+Line3: NAME is "Item".  Set VALUE to the product name or title.  In the example, we used the VALUE for the book title.
+
+
+
+Line 4: NAME is set to "Describe".  This provides a data set for any necessary product description required.   In our bookstore example, the VALUE is assigned the name of the author.
+
+
+
+Line 5: This data set is another product descriptor if needed.  The data is NAMED "Info".  In our example, the VALUE is "Hardback".
+
+
+
+
+Line 6:Line six is a text input line to allow quantity of items to be entered.  The customer selects an item by entering the desired quantity.   
+
+
+
+If quantity does not apply in your particular application, then make the quantity line a checkbox, that will send info to the program only if selected,  and assign "1" to the value.
+
+50 Best Short Hikes in California
+
+
+==============================================
+Customer Information:
+==============================================
+
+Collect whatever information you desire from the user, use any form-permitted data collections tools you wish....text boxes, radial buttons, etc.
+
+Second E-mail address:
+
+If you want a copy of the forms output to be mailed to your site visitor, use a text box in which
+your visitor inputs his/her email address to receive a copy
+of the output.  Name the data pair "Address2"
+
+
+State Sales Tax:  
+
+
+
+
+Use the HTML language from the sample above on this page.   Cut and paste into your document, and customize the form language in your web pages as required.   
+
+NOTE: In the HTML language, the value assigned to NAME in the data pairs must remain exactly as they are shown...notice that the convention is capitalizing the first letter only.  
+
+
+
+======================================================
+5.  FORMATTING OUTPUT
+======================================================
+
+
+The output from your form may be formatted in any manner you choose by designing the output in a text file.  You may name the file anything you choose, but call the file by using the NAME="Template" in the data pair hidden line.
+
+Here is a sample of the "output.txt" file used in our sample above.  The wording in your file can be anything you choose. The NAME of your variables from your form are placed in the file as desired, following the convention as indicated... ${Varname}...beginning with "$" and the Varname enclosed in curly brackets.
+
+Notice that you indicate the variables that apply to the items purchased only once, even though they will be repeated for each item purchased.
+
+
+
+=======================================
+      OUTPUT FORMAT TEXT FILE
+=======================================
+
+You Purchased:  ${Qty}  No: ${Prodno} - ${Item}
+     	${Describe}
+     	${Info}
+       ${price} each.........${Amount}
+
+
+Amount of purchases are......${Sub_Total}
+Shipping/Handling............${Shipping}
+Tax..........................${Tax}
+
+Total Amount of Sale.........${Total}
+
+
+=======================================
+       Thanks for Visiting Us!
+=======================================
+
+
+Omitting the hidden line call to "Template" is allowed but the output will all be left justified and may not be to your liking.
+
+
+
+TROUBLE SHOOTING:  
+
+If you have any problems with your programs
+not working, check the following:
+
+
+1.  Is the Clickables program loaded on the server, and is the directory path to it correct and given the proper permissions.
+2.  The pathnames to directories on your server can be a little tricky, based upon how your server is mapped or configured.  If an absolute pathname is required, as in the case of pointing to your output template file, insure that you are not using a relative or virtual pathname.
+
+3.  Check the spelling of the words assigned to NAME in the data pairs. Make sure that they are as called for and that they  are following the upper and lower case convention.
+
+
+Clickable Software
+26 Medway, Suite 13
+San Rafael, CA 94901
+Voice - 415 456-5582
+Fax - 415 456-4018
+
+
+
+Clickable Software, Copyright 1995, 1996 - All Rights Reserved
+

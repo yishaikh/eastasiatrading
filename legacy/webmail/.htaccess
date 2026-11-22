@@ -1,0 +1,5 @@
+
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^webmail\.eastasiatrading\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.webmail\.eastasiatrading\.com$
+RewriteRule ^/?$ "http\:\/\/prateekshawebdesign\.com\/webmail\/" [R=301,L]
