@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # East Asia Trading – Modernized static website
 
 ## Run locally
@@ -18,3 +19,6 @@ Open `index.html` in a browser or serve this directory using `python -m http.ser
 3. Audit archived `legacy/`, `Guestbook/`, `order.htm`, and server-side directories before public deployment; remove unsafe legacy scripts from the live server only after approval.
 4. Test every link and form in browser and across device sizes.
 5. Review product descriptions for outdated claims and dates.
+=======
+# eastasiatrading
+>>>>>>> 12906b250d41b9d346637f8ab0a4a8f0f7048847
